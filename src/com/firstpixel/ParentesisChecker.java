@@ -19,8 +19,10 @@ public class ParentesisChecker {
 	            
 	            ArrayList<String> arr = new ArrayList<String>();
 	            
-	            arr.add("{}{(}))}");  
-	            	            for (int i=0; i< a; i++) {
+	            arr.add("{}{(}))}"); 
+	            arr.add("{}{({})}"); 
+	            arr.add("{}{()}"); 
+	            	            for (int i=0; i< arr.size(); i++) {
 	            	                String str = arr.get(i).trim();
 	            	                if(isBalanced(str)) {
 	            	                	System.out.println("balanced");

@@ -43,6 +43,9 @@ public class BreathFirstSearch {
 		node3.left = node7;
 		node5.right = node8;
 		
+		printLevel(node1, 2, 0);
+        
+		
         boolean search = BFS(node1, 8);
 
         if(search) {
@@ -70,6 +73,7 @@ public class BreathFirstSearch {
         nodeTree5.children.add(nodeTree6);
         nodeTree6.children.add(nodeTree7);
         nodeTree7.children.add(nodeTree8);
+        
         
 		boolean search1 = BFS(nodeTree1, 8);
 
@@ -113,6 +117,14 @@ public class BreathFirstSearch {
         	visited.add(curr);
         }		
 		return true;
+	}
+	
+	static void printLevel(NodeBFS curr, int k, int level){
+        if(level == k) {
+            System.out.print(curr.value + " ");
+        }
+        if(curr.left != null)printLevel(curr.left, k, level +1);
+        if(curr.right != null)printLevel(curr.right, k, level +1);
 	}
 	
 	

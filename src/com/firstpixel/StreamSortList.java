@@ -1,14 +1,12 @@
 package com.firstpixel;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class StreamSortList {
 
 	public static void main(String[] args) {
-		
 		// TODO Auto-generated method stub
 		Item item1 = new Item("Richard", 3);
 		Item item2 = new Item("Andrew", 2);
@@ -29,7 +27,6 @@ public class StreamSortList {
 		System.out.println(sortedItemList2);
 		System.out.println(itemList);
 	}
-
 }
 
 class Item {
